@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Internships</title>
+    <link rel="stylesheet" href="template.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@300&display=swap" rel="stylesheet">
+    <style>
+        .hero {
+            width: 98%;
+            height:98vh;
+            margin-left:1%;
+            margin-top:1vh;
+            border-radius:3vw;
+            background: url("card-3-bg.jpg"), rgba(0,0,0,0.2);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-blend-mode: overlay;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            text-transform:uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <h2><span></span></h2>
+        <h1><span>GENERATING</span></h1>
+    </div>
+    <div class="navbar">
+        <h2>astroGEN.</h2>
+        <div class="menu-toggle">
+            <img class="black" src="navbar-black.svg" alt="">
+            <img class="yellow" src="navbar-yellow.svg" alt="">
+        </div>
+    </div>
+    <div class="menu">
+        <div class="nav-links">
+            <a href="index.html"><span style="--animation-index:2;">HOME</span></a>
+            <a href="about.html"><span style="--animation-index:3;">ABOUT</span></a>
+            <a href="journal.html"><span style="--animation-index:4;">JOURNAL</span></a>
+            <a href="services.html"><span style="--animation-index:5;">SERVICES</span></a>
+        </div>
+        <div class="contacts">
+            <h2 style="--animation-index:0;">CONTACT US</h2>
+            <div class="socials" style="--animation-index:1;">
+                <a href="">INSTAGRAM</a>
+                <a href="https://www.linkedin.com/company/astrogen/">LINKEDIN</a>
+                <a href="https://www.youtube.com/@NSSEA">YOUTUBE</a>
+            </div>
+            <a style="--animation-index:2;" href="mailto:nationalastrophysics@gmail.com">nationalastrophysics@gmail.com</a>
+        </div>
+    </div>
+    <div class="cursor"><h1><span></span></h1></div>
+    <div class="scroll-container">
+        <div class="hero">
+            <h1>Student Internships</h1>
+            <p>Connecting Students With Industry</p>
+            <a href="">SEE MORE</a>
+        </div>
+        <div class="about">
+            <p>NSSEA is currently offering countless research opportunities, internships, volunteer hours, and even leadership positions for students across the world that you can use to spice up your college application or resume and further your impact in the scientific community.</p>
+        </div>
+        <div class="contact">
+            <h1>JOIN US!</h1>
+            <a href="mailto@stem.thinktank@gmail.com">CONTACT US</a>
+        </div>
+        <div class="final">
+            <h1>Join us in this innovation journey!</h1>
+        </div>
+        <div class="footer">
+            <div class="content">
+                <div class="left">
+                    <p>COPYRIGHT &copy; 2023 ALL RIGHTS RESERVED. ASTROGEN.</p>
+                    <p>DESIGNED AND DEVELOPED BY RUDRA SEKHRI</p>
+                </div>
+                <div class="right">
+                    <div class="links">
+                        <a href="">INSTAGRAM</a>
+                        <a href="https://www.linkedin.com/company/astrogen/">LINKEDIN</a>
+                        <a href="https://www.youtube.com/@NSSEA">YOUTUBE</a>
+                    </div>
+                    <a href="mailto:nationalastrophysics@gmail.com">nationalastrophysics@gmail.com</a>
+                </div>
+            </div>
+            <h1>astroGEN.</h1>
+        </div>
+    </div>
+    <script src="navbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="smooth-scroll.js"></script>
+    <script src="loading.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="cursor.js"></script>
+</body>
+</html>

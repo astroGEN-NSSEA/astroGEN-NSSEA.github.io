@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>astroGEN.</title>
+</head>
+<body>
+    <div class="loading">
+        <h2><span></span></h2>
+        <h1><span>GENERATING</span></h1>
+    </div>
+    <div class="navbar">
+        <h2>astroGEN.</h2>
+        <div class="menu-toggle">
+            <img class="black" src="navbar-black.svg" alt="">
+            <img class="yellow" src="navbar-yellow.svg" alt="">
+        </div>
+    </div>
+    <div class="menu">
+        <div class="nav-links">
+            <a onclick="goToSection('hero');"><span style="--animation-index:2;">HOME</span></a>
+            <a onclick="goToSection('mission');"><span style="--animation-index:3;">ABOUT</span></a>
+            <a href="journal.html"><span style="--animation-index:4;">JOURNAL</span></a>
+            <a onclick="goToSection('services');"><span style="--animation-index:5;">SERVICES</span></a>
+        </div>
+        <div class="contacts">
+            <h2 style="--animation-index:0;">CONTACT US</h2>
+            <div class="socials" style="--animation-index:1;">
+                <a href="">INSTAGRAM</a>
+                <a href="https://www.linkedin.com/company/astrogen/">LINKEDIN</a>
+                <a href="https://www.youtube.com/@NSSEA">YOUTUBE</a>
+            </div>
+            <a style="--animation-index:2;" href="mailto:nationalastrophysics@gmail.com">nationalastrophysics@gmail.com</a>
+        </div>
+    </div>
+    <div class="cursor"><h1><span></span></h1></div>
+    <div class="scroll-container">
+        <div class="hero">
+            <div class="hero-content">
+                <div class="description">
+                    <p>< WE'RE BRINGING RESEARCH TO THE PHYSICISTS OF TOMORROW ></p>
+                    <a onclick="lenis.scrollTo('.mission');">HOW?</a>
+                </div>
+                <div class="title">
+                    <h1><span>ASTRONOMY</span></h1>
+                </div>
+            </div>
+        </div>
+        <div class="mission">
+            <h1>WE'RE astroGEN. AN ORGANISATION DEDICATED TO CONNECTING STUDENTS WITH <span>PHYSICS.</span></h1>
+            <p>WE ACHIEVE THIS THROUGH FACILITATING RESEARCH OPPORTUNITIES FOR STUDENTS, SPECIFICALLY IN THE AREA OF ASTRONOMY.</p>
+        </div>
+        <div class="services">
+            <h1>OUR SERVICES</h1>
+            <div class="first-service service" onclick="window.location.href = 'iic.html'">
+                <div class="image">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <h1>INTERNATIONAL INNOVATION CHALLENGE</h1>
+                    </div>
+                </div>
+                <div class="tags">
+                    <div class="left">
+                        <p>EVENT</p>
+                    </div>
+                    <div class="right">
+                        <p>ENGINEERING</p>
+                        <p>PHYSICS</p>
+                    </div>
+                </div>
+            </div>
+            <div class="second-service service" onclick="window.location.href = 'journal.html'">
+                <div class="image">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <h1>SCIENCE JOURNAL</h1>
+                    </div>
+                </div>
+                <div class="tags">
+                    <div class="left">
+                        <p>ARTICLE</p>
+                    </div>
+                    <div class="right">
+                        <p>ASTROPHYSICS</p>
+                    </div>
+                </div>
+            </div>
+            <div class="third-service service" onclick="window.location.href = 'si.html'">
+                <div class="image">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <h1>STUDENT INTERNSHIPS</h1>
+                    </div>
+                </div>
+                <div class="tags">
+                    <div class="left">
+                        <p>OPPORTUNITY</p>
+                    </div>
+                    <div class="right">
+                        <p>PHYSICS</p>
+                    </div>
+                </div>
+            </div>
+            <a href="services.html">VIEW MORE</a>
+        </div>
+        <div class="about">
+            <p>NSSEA is a contemporary organization, founded on the basis of helping high-achieving students across the United States engage in novel physics research astrophysics, engineering, and computer science.</p>
+            <a href="team.html">MEET THE TEAM</a>
+        </div>
+        <div class="contact">
+            <h1>WANT TO CONNECT?<br>JOIN US!</h1>
+            <a href="mailto:nationalastrophysics@gmail.com">CONTACT US</a>
+        </div>
+        <div class="image-before-footer"></div>
+        <div class="footer">
+            <div class="content">
+                <div class="left">
+                    <p>COPYRIGHT &copy; 2023 ALL RIGHTS RESERVED. ASTROGEN.</p>
+                    <p>DESIGNED AND DEVELOPED BY RUDRA SEKHRI</p>
+                </div>
+                <div class="right">
+                    <div class="links">
+                        <a href="">INSTAGRAM</a>
+                        <a href="https://www.linkedin.com/company/astrogen/">LINKEDIN</a>
+                        <a href="https://www.youtube.com/@NSSEA">YOUTUBE</a>
+                    </div>
+                    <a href="mailto:nationalastrophysics@gmail.com">nationalastrophysics@gmail.com</a>
+                </div>
+            </div>
+            <h1>astroGEN.</h1>
+        </div>
+    </div>
+    <script src="navbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="smooth-scroll.js"></script>
+    <script src="loading.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="cursor.js"></script>
+    <script>
+        function goToSection(nameOfSection) {
+            lenis.scrollTo('.' + nameOfSection);
+            menu_toggle.classList.toggle('activated');
+            navigation_menu.classList.toggle('activated');
+            org_title.classList.toggle('hide');
+        }
+    </script>
+</body>
+</html>

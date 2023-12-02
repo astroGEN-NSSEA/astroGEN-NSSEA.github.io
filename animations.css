@@ -1,0 +1,117 @@
+.loading {
+    width:95%;
+    height:95vh;
+    padding:2.5vh 2.5%;
+    background:#FFE0B9;
+    color:black;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:50;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    animation:scaleDown 0.75s ease forwards;
+    animation-delay:2.5s;
+}
+
+.loading h1 {
+    font-size:20vw;
+    line-height:1;
+    overflow:hidden;
+}
+
+.loading h2 {
+    font-size:5vw;
+    font-family: 'Anton', sans-serif;
+    margin-left:1vw;
+    overflow:hidden;
+}
+
+.loading h2 span {
+    animation: disappear 1s ease forwards;
+    animation-delay: 2.2s;
+}
+
+.loading span {
+    display: inline-block;
+}
+
+.loading h1 span {
+    animation: disappear 1s ease forwards;
+    animation-delay: 2.2s;
+}
+
+.hero h1 span {
+    display: inline-block;
+    animation: appear 1s ease forwards;
+    animation-delay: 2.7s;
+    transform:translateY(150%);
+}
+
+.hero p {
+    transform:translateY(3vh);
+    opacity:0;
+    animation:appearText 0.75s ease forwards;
+    animation-delay:2.9s;
+}
+
+.hero a {
+    transform:translateY(3vh);
+    opacity:0;
+    animation:appearText 0.75s ease forwards;
+    animation-delay:3s;
+}
+
+@keyframes disappear {
+    from {
+        transform:translateY(0);
+    }
+
+    to {
+        transform:translateY(-150%);
+    }
+}
+
+@keyframes scaleDown {
+    from {
+        transform:scaleY(1);
+        transform-origin:top;
+    }
+
+    to {
+        transform:scaleY(0);
+        transform-origin:top;
+    }
+}
+
+@keyframes appear {
+    from {
+        transform:translateY(150%);
+    }
+
+    to {
+        transform:translateY(0%);
+    }
+}
+
+@keyframes appearText {
+    from {
+        transform:translateY(3vh);
+        opacity:0;
+    }
+
+    to {
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+.line {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.line .char {
+    transform:translateY(150%);
+    transition:transform 0.5s ease;
+}
