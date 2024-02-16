@@ -273,7 +273,7 @@ overflow: hidden;
 
 .submissions {
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
     grid-row-gap:1vh;
     grid-column-gap:1vh;
     width:80%;
@@ -302,17 +302,25 @@ p {
 .submission {
     display:flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap:3vh;
-    background:#111;
+    justify-content: flex-end;
+    gap:2vh;
     padding:5vh 2vw;
+    background:url('bg.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    height:60vh;
+
 }
 
 .submissions h2 {
-    font-size:4vw;
+    font-size:3vw;
     line-height:1;
-    text-align:center;
+    text-align:left;
+}
+
+.submission img {
+    width:100%;
 }
 
 a {
@@ -324,7 +332,7 @@ a {
 }
 
 .submission a {
-    margin-top:1.5vh;
+    margin-top:0vh;
     display:inline-block;
     padding:1vh 1.5vw;
     border:2px solid white;
