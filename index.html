@@ -25,9 +25,9 @@
     <div class="menu">
         <div class="nav-links">
             <a onclick="goToSection('hero');"><span style="--animation-index:2;">HOME</span></a>
-            <a onclick="goToSection('mission');"><span style="--animation-index:3;">ABOUT</span></a>
-            <a href="journal.html"><span style="--animation-index:4;">JOURNAL</span></a>
-            <a onclick="goToSection('services');"><span style="--animation-index:5;">SERVICES</span></a>
+            <a onclick="goToSection('mission');"><span style="--animation-index:3;">EVENTS</span></a>
+            <a href="journal.html"><span style="--animation-index:4;">RESEARCH</span></a>
+            <a onclick="goToSection('services');"><span style="--animation-index:5;">CHAPTERS</span></a>
         </div>
         <div class="contacts">
             <h2 style="--animation-index:0;">CONTACT US</h2>
@@ -42,6 +42,7 @@
     <div class="cursor"><h1><span></span></h1></div>
     <div class="scroll-container">
         <div class="hero">
+            <video id="background-video" autoplay muted loop></video>
             <div class="hero-content">
                 <div class="description">
                     <p>< WE'RE BRINGING RESEARCH TO THE PHYSICISTS OF TOMORROW ></p>
@@ -51,11 +52,11 @@
                     <h1><span>astroGEN</span></h1>
                 </div>
             </div>
-        </div>
+        </div>              
         <div class="mission">
             <h1>WE'RE astroGEN. AN ORGANISATION DEDICATED TO CONNECTING STUDENTS WITH <span>PHYSICS.</span></h1>
             <p>WE ACHIEVE THIS THROUGH FACILITATING RESEARCH OPPORTUNITIES FOR STUDENTS, SPECIFICALLY IN THE AREA OF ASTRONOMY.</p>
-        </div>
+        </div>      
         <div class="services">
             <h1>OUR SERVICES</h1>
             <div class="first-service service" onclick="window.location.href = 'iic.html'">
@@ -149,6 +150,24 @@
             navigation_menu.classList.toggle('activated');
             org_title.classList.toggle('hide');
         }
+
+            window.onload = function() {
+                // Array of video file paths
+                const videos = ['1.mp4', '2.mp4', '3.mp4', '4.mp4', '9.mp4', '10.mp4', '11.mp4'];
+        
+                // Select a random video
+                const randomVideo = videos[Math.floor(Math.random() * videos.length)];
+        
+                // Set the video source
+                const videoElement = document.getElementById('background-video');
+                videoElement.src = randomVideo;
+        
+                // Set video attributes
+                videoElement.autoplay = true;
+                videoElement.muted = true;
+                videoElement.loop = true;
+            };
+        
     </script>
 </body>
 </html>
