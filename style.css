@@ -3,6 +3,13 @@
     padding:0;
 }
 
+title {
+    font-size: 4em; /* Adjust as needed */
+    color: #FFE0B9;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    font-family: 'YourFontFamily', sans-serif;
+}
+
 body {
     background:black;
     color:white;
@@ -290,17 +297,24 @@ a {
 }
 
 .hero {
-    width:95%;
-    height:95vh;
-    background:url('hero-bg.jpg');
-    background-position:center;
-    background-size:cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    display:flex;
+    width: 100%;
+    height: 95vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
     flex-direction: column;
-    padding:2.5vh 2.5%;
+    padding: 2.5vh 2.5%;
     justify-content: flex-end;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensure the video stays behind the content */
 }
 
 .hero h1 {
@@ -597,4 +611,151 @@ a {
     transform:translateY(0vh);
     opacity:1;
     transition:transform 0.2s ease, opacity 0.2s ease-in-out;
+}
+
+/* Stat Section */
+.stats-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    gap: 20px;
+}
+
+.stat-card {
+    position: relative;
+    width: 30%;
+    padding-bottom: 20%;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 8px solid #FFE0B9;
+}
+
+
+.stat-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    z-index: 1;
+}
+
+.stat-text p, .stat-image p {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+    font-family: 'YourFontFamily', sans-serif;
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0;
+}
+
+.stat-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: none; /* Remove blur */
+    z-index: 1;
+}
+
+
+/* Map Container */
+.stat-map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    filter: none; /* No blur for the map */
+}
+
+#us-map .highlight {
+    fill: #FFE0B9;
+    transition: fill 0.3s;
+}
+
+#us-map path {
+    fill: #ccc; /* Non-highlighted states */
+}
+
+.chart {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 100%;
+    padding: 10px;
+}
+
+.bar {
+    width: 20%;
+    background-color: #FFE0B9;
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+    animation: growBar 2s ease-in-out;
+}
+
+@keyframes growBar {
+    from {
+        height: 0;
+    }
+    to {
+        height: var(--height, 100%);
+    }
+}
+
+.counter {
+    font-size: 3em;
+    color: #FFE0B9;
+    text-align: center;
+    margin-top: 20%;
+    font-family: 'YourFontFamily', sans-serif;
+}
+
+.counter-text p {
+    font-size: 1em;
+    color: #FFF;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'YourFontFamily', sans-serif;
+}
+
+
+#MI {
+    fill: #FFE0B9;
+}
+
+#us-map {
+    width: 80%;
+    height: 80%;
+}
+
+.stat-map p {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#us-map svg {
+    width: 100%;
+    height: 100%;
+}
+
+#us-map .highlight {
+    fill: #FFE0B9;
+    transition: fill 0.3s;
+}
+
+#us-map path {
+    fill: #ccc; /* Non-highlighted states */
+}
+
+#us-map .highlight:hover {
+    fill: #FFE0B9;
 }
